@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const langs = {
   en: {
@@ -88,6 +88,11 @@ const langs = {
 export default function Home() {
   const [lang, setLang] = useState('en');
   const t = langs[lang];
+
+  useEffect(() => {
+    const code = (navigator.language || '').slice(0, 2).toLowerCase();
+    if (langs[code]) setLang(code);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0a0a0f] relative overflow-hidden">
