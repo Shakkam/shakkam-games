@@ -79,7 +79,7 @@ export default function Home() {
 
                 {/* Google Play */}
                 <a
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.shakkam.guessyourmind"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/60 rounded-2xl px-5 py-3 transition-all duration-200 group"
