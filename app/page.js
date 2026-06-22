@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { QRCodeSVG } from 'qrcode.react';
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.shakkam.guessyourmind';
+const APP_STORE_URL = 'https://apps.apple.com/fr/app/guessyourmind/id6769421421';
 
 const langs = {
   en: {
@@ -14,7 +15,7 @@ const langs = {
     available: 'Available now',
     desc: 'Test your mental abilities and challenge your friends in this captivating psychological guessing game. Read minds, guess the answers and see who knows you best.',
     playStore: 'Available on',
-    appSoon: 'Coming soon on',
+    appSoon: 'Available on',
     footer: 'All rights reserved',
   },
   fr: {
@@ -24,7 +25,7 @@ const langs = {
     available: 'Disponible maintenant',
     desc: 'Testez vos capacités mentales et défiez vos amis dans ce jeu de devinettes psychologiques captivant. Lisez dans les pensées, devinez les réponses et voyez qui vous connaît le mieux.',
     playStore: 'Disponible sur',
-    appSoon: 'Bientôt sur',
+    appSoon: 'Disponible sur',
     footer: 'Tous droits réservés',
   },
   es: {
@@ -34,7 +35,7 @@ const langs = {
     available: 'Disponible ahora',
     desc: 'Pon a prueba tus habilidades mentales y desafía a tus amigos en este cautivador juego de adivinanzas psicológicas. Lee mentes, adivina las respuestas y descubre quién te conoce mejor.',
     playStore: 'Disponible en',
-    appSoon: 'Próximamente en',
+    appSoon: 'Disponible en',
     footer: 'Todos los derechos reservados',
   },
   de: {
@@ -44,7 +45,7 @@ const langs = {
     available: 'Jetzt verfügbar',
     desc: 'Teste deine mentalen Fähigkeiten und fordere deine Freunde in diesem fesselnden psychologischen Ratespiel heraus. Lies Gedanken, errate die Antworten und sieh, wer dich am besten kennt.',
     playStore: 'Erhältlich auf',
-    appSoon: 'Bald auf',
+    appSoon: 'Erhältlich auf',
     footer: 'Alle Rechte vorbehalten',
   },
   pt: {
@@ -54,7 +55,7 @@ const langs = {
     available: 'Disponível agora',
     desc: 'Teste suas habilidades mentais e desafie seus amigos neste cativante jogo de adivinhação psicológica. Leia mentes, adivinhe as respostas e veja quem te conhece melhor.',
     playStore: 'Disponível no',
-    appSoon: 'Em breve no',
+    appSoon: 'Disponível no',
     footer: 'Todos os direitos reservados',
   },
   ja: {
@@ -64,7 +65,7 @@ const langs = {
     available: '今すぐプレイ',
     desc: '心理的な推測ゲームで精神力をテストし、友達に挑戦しましょう。心を読み、答えを推測して、誰があなたを一番知っているか確かめよう。',
     playStore: 'Google Playで入手',
-    appSoon: 'App Storeで近日公開',
+    appSoon: 'App Storeで入手',
     footer: '全著作権所有',
   },
   zh: {
@@ -74,7 +75,7 @@ const langs = {
     available: '立即可玩',
     desc: '在这款引人入胜的心理猜谜游戏中测试你的心智能力，挑战你的朋友。读懂他人的思想，猜出答案，看看谁最了解你。',
     playStore: 'Google Play下载',
-    appSoon: '即将登陆App Store',
+    appSoon: '在App Store下载',
     footer: '版权所有',
   },
   it: {
@@ -84,7 +85,7 @@ const langs = {
     available: 'Disponibile ora',
     desc: 'Metti alla prova le tue capacità mentali e sfida i tuoi amici in questo avvincente gioco di indovinelli psicologici. Leggi le menti, indovina le risposte e scopri chi ti conosce meglio.',
     playStore: 'Disponibile su',
-    appSoon: 'Presto su',
+    appSoon: 'Disponibile su',
     footer: 'Tutti i diritti riservati',
   },
 };
@@ -179,9 +180,11 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-10 items-center">
 
             <div className="float flex-shrink-0">
-              <div className="w-36 h-36 bg-gradient-to-br from-purple-500 via-violet-600 to-purple-800 rounded-[2rem] flex items-center justify-center shadow-2xl shadow-purple-900/60">
-                <span className="text-6xl">🧠</span>
-              </div>
+              <img
+                src="/images/icone.png"
+                alt="Guess Your Mind"
+                className="w-36 h-36 rounded-[2rem] shadow-2xl shadow-purple-900/60 object-cover"
+              />
             </div>
 
             <div className="flex-1 text-center md:text-left">
@@ -216,7 +219,13 @@ export default function Home() {
                   </div>
                 </a>
 
-                <div onClick={(e) => e.stopPropagation()} className="flex items-center gap-3 bg-white/[0.03] border border-white/[0.07] rounded-2xl px-5 py-3 opacity-50 cursor-not-allowed select-none">
+                <a
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/60 rounded-2xl px-5 py-3 transition-all duration-200"
+                >
                   <svg className="w-7 h-7 flex-shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                   </svg>
@@ -224,7 +233,7 @@ export default function Home() {
                     <div className="text-zinc-500 text-xs leading-none mb-0.5">{t.appSoon}</div>
                     <div className="text-white font-semibold text-sm leading-none">App Store</div>
                   </div>
-                </div>
+                </a>
 
               </div>
 
@@ -239,12 +248,9 @@ export default function Home() {
                   </div>
                   <span className="text-zinc-600 text-xs">Google Play</span>
                 </div>
-                <div className="flex flex-col items-center gap-2 opacity-35">
-                  <div className="bg-white/10 border border-white/10 rounded-xl w-[88px] h-[88px] flex flex-col items-center justify-center gap-1">
-                    <svg className="w-5 h-5 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-                    </svg>
-                    <span className="text-zinc-600 text-xs text-center px-1">Soon</span>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="bg-white rounded-xl p-2 shadow-md shadow-purple-900/20">
+                    <QRCodeSVG value={APP_STORE_URL} size={72} level="M" />
                   </div>
                   <span className="text-zinc-600 text-xs">App Store</span>
                 </div>

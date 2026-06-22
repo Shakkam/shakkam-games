@@ -5,12 +5,13 @@ import Link from 'next/link';
 import { QRCodeSVG } from 'qrcode.react';
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.shakkam.guessyourmind';
+const APP_STORE_URL = 'https://apps.apple.com/fr/app/guessyourmind/id6769421421';
 
 const langs = {
   en: {
     back: 'Back',
     available: 'Available on Google Play',
-    appSoon: 'Coming soon on App Store',
+    appSoon: 'Available on App Store',
     desc: 'Test your mental abilities and challenge your friends in this captivating psychological guessing game. Read minds, guess the answers and see who knows you best.',
     screenshots: 'Screenshots',
     features: 'Key Features',
@@ -27,7 +28,7 @@ const langs = {
   fr: {
     back: 'Retour',
     available: 'Disponible sur Google Play',
-    appSoon: 'Bientôt sur App Store',
+    appSoon: 'Disponible sur App Store',
     desc: 'Testez vos capacités mentales et défiez vos amis dans ce jeu de devinettes psychologiques captivant. Lisez dans les pensées, devinez les réponses et voyez qui vous connaît le mieux.',
     screenshots: "Captures d'écran",
     features: 'Fonctionnalités',
@@ -44,7 +45,7 @@ const langs = {
   es: {
     back: 'Volver',
     available: 'Disponible en Google Play',
-    appSoon: 'Próximamente en App Store',
+    appSoon: 'Disponible en App Store',
     desc: 'Pon a prueba tus habilidades mentales y desafía a tus amigos en este cautivador juego de adivinanzas psicológicas.',
     screenshots: 'Capturas de pantalla',
     features: 'Características',
@@ -61,7 +62,7 @@ const langs = {
   de: {
     back: 'Zurück',
     available: 'Verfügbar auf Google Play',
-    appSoon: 'Bald im App Store',
+    appSoon: 'Verfügbar im App Store',
     desc: 'Teste deine mentalen Fähigkeiten und fordere deine Freunde in diesem fesselnden psychologischen Ratespiel heraus.',
     screenshots: 'Screenshots',
     features: 'Funktionen',
@@ -78,7 +79,7 @@ const langs = {
   pt: {
     back: 'Voltar',
     available: 'Disponível no Google Play',
-    appSoon: 'Em breve na App Store',
+    appSoon: 'Disponível na App Store',
     desc: 'Teste suas habilidades mentais e desafie seus amigos neste cativante jogo de adivinhação psicológica.',
     screenshots: 'Capturas de tela',
     features: 'Funcionalidades',
@@ -95,7 +96,7 @@ const langs = {
   ja: {
     back: '戻る',
     available: 'Google Playで配信中',
-    appSoon: 'App Storeで近日公開',
+    appSoon: 'App Storeで入手',
     desc: '心理的な推測ゲームで精神力をテストし、友達に挑戦しましょう。心を読み、答えを推測して、誰があなたを一番知っているか確かめよう。',
     screenshots: 'スクリーンショット',
     features: '特徴',
@@ -112,7 +113,7 @@ const langs = {
   zh: {
     back: '返回',
     available: '在Google Play上可用',
-    appSoon: '即将登陆App Store',
+    appSoon: '在App Store下载',
     desc: '在这款引人入胜的心理猜谜游戏中测试你的心智能力，挑战你的朋友。读懂他人的思想，猜出答案，看看谁最了解你。',
     screenshots: '截图',
     features: '特色功能',
@@ -129,7 +130,7 @@ const langs = {
   it: {
     back: 'Indietro',
     available: 'Disponibile su Google Play',
-    appSoon: 'Presto su App Store',
+    appSoon: 'Disponibile su App Store',
     desc: "Metti alla prova le tue capacità mentali e sfida i tuoi amici in questo avvincente gioco di indovinelli psicologici.",
     screenshots: 'Screenshot',
     features: 'Caratteristiche',
@@ -335,9 +336,11 @@ export default function GuessYourMind() {
       {/* Hero */}
       <section className="relative z-10 text-center pt-10 pb-16 px-8">
         <div className="float inline-block mb-6">
-          <div className="w-28 h-28 bg-gradient-to-br from-purple-500 via-violet-600 to-purple-800 rounded-[2rem] flex items-center justify-center shadow-2xl shadow-purple-900/60 mx-auto">
-            <span className="text-5xl">🧠</span>
-          </div>
+          <img
+            src="/images/icone.png"
+            alt="Guess Your Mind"
+            className="w-28 h-28 rounded-[2rem] shadow-2xl shadow-purple-900/60 object-cover mx-auto"
+          />
         </div>
         <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white mb-5 leading-none">
           Guess Your Mind
@@ -411,8 +414,13 @@ export default function GuessYourMind() {
           </div>
 
           {/* App Store */}
-          <div className="flex flex-col items-center gap-3 opacity-40">
-            <div className="flex items-center gap-3 bg-white/[0.03] border border-white/[0.07] rounded-2xl px-6 py-4 cursor-not-allowed select-none w-full sm:w-auto">
+          <div className="flex flex-col items-center gap-3">
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-purple-500/60 rounded-2xl px-6 py-4 transition-all duration-200 w-full sm:w-auto"
+            >
               <svg className="w-7 h-7 flex-shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
               </svg>
@@ -420,13 +428,11 @@ export default function GuessYourMind() {
                 <div className="text-zinc-500 text-xs leading-none mb-1">{t.appSoon}</div>
                 <div className="text-white font-bold text-base leading-none">App Store</div>
               </div>
+            </a>
+            <div className="bg-white rounded-xl p-2.5 shadow-lg shadow-purple-900/30">
+              <QRCodeSVG value={APP_STORE_URL} size={100} level="M" />
             </div>
-            <div className="bg-white/10 border border-white/10 rounded-xl w-[117px] h-[117px] flex flex-col items-center justify-center gap-1">
-              <svg className="w-6 h-6 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-              </svg>
-              <span className="text-zinc-600 text-xs text-center px-2">Coming soon</span>
-            </div>
+            <p className="text-zinc-600 text-xs">{t.scanPlay}</p>
           </div>
 
         </div>
