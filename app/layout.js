@@ -6,8 +6,8 @@ const sans = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 export const metadata = {
-  title: 'LEO Labs — Apps, jeux & sites web',
-  description: 'LEO Labs, studio indépendant né à Léognan : jeux mobiles (Shakkam Games), applications et sites web.',
+  title: 'LEO Labs — Apps & sites web',
+  description: 'LEO Labs, studio indépendant né à Léognan : applications mobiles, jeux (Shakkam Games) et sites web.',
   icons: { icon: '/icon.svg' },
 };
 
