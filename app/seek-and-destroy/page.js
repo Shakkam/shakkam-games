@@ -25,6 +25,15 @@ export default function SeekAndDestroy() {
       {(t) => (
         <>
           <section className="mx-auto max-w-5xl px-4 sm:px-6 pb-24">
+            <SectionTitle>{t.gameplay}</SectionTitle>
+            <Reveal>
+              <div className="rounded-3xl border border-white/10 overflow-hidden bg-black shadow-2xl shadow-cyan-900/20">
+                <img src="/images/projects/sd/gameplay.webp" alt={t.gameplay} loading="lazy" className="w-full block pixelated" />
+              </div>
+            </Reveal>
+          </section>
+
+          <section className="mx-auto max-w-5xl px-4 sm:px-6 pb-24">
             <SectionTitle>{t.g1}</SectionTitle>
             <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3">
               {PILOTS.map((p, i) => (

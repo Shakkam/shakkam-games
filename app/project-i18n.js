@@ -93,6 +93,7 @@ export const seekLangs = {
     f2t: 'Fixed kits', f2d: 'Each pilot has their own set of 3-4 weapons, charged by bonus gauges. Learn a kit, master the fight.',
     f3t: 'A campaign per pilot', f3d: 'Each character has a story, a world map to cross and a final boss waiting at the end.',
     g1: 'Nine pilots',
+    gameplay: 'Gameplay',
   },
   fr: {
     tagline: 'Quand Pong rencontre le shoot\'em up.',
@@ -101,6 +102,7 @@ export const seekLangs = {
     f2t: 'Des kits fixes', f2d: 'Chaque pilote a son propre jeu de 3-4 armes, chargées par des jauges de bonus. Apprenez un kit, maîtrisez le combat.',
     f3t: 'Une campagne par pilote', f3d: 'Chaque personnage a son histoire, une carte du monde à traverser et un boss final qui l\'attend.',
     g1: 'Neuf pilotes',
+    gameplay: 'En jeu',
   },
   es: {
     tagline: 'Cuando Pong se encuentra con el shoot\'em up.',
@@ -109,6 +111,7 @@ export const seekLangs = {
     f2t: 'Kits fijos', f2d: 'Cada piloto tiene su propio conjunto de 3-4 armas, cargadas con medidores de bonus. Aprende un kit, domina el combate.',
     f3t: 'Una campaña por piloto', f3d: 'Cada personaje tiene su historia, un mapa del mundo por recorrer y un jefe final esperando.',
     g1: 'Nueve pilotos',
+    gameplay: 'En juego',
   },
   de: {
     tagline: 'Pong trifft Shoot\'em up.',
@@ -117,6 +120,7 @@ export const seekLangs = {
     f2t: 'Feste Waffensets', f2d: 'Jeder Pilot hat sein eigenes Set aus 3-4 Waffen, aufgeladen über Bonus-Anzeigen. Lerne ein Set, beherrsche den Kampf.',
     f3t: 'Eine Kampagne pro Pilot', f3d: 'Jede Figur hat ihre Geschichte, eine Weltkarte zum Durchqueren und einen Endboss, der wartet.',
     g1: 'Neun Piloten',
+    gameplay: 'Im Spiel',
   },
   pt: {
     tagline: 'Quando o Pong encontra o shoot\'em up.',
@@ -125,6 +129,7 @@ export const seekLangs = {
     f2t: 'Kits fixos', f2d: 'Cada piloto tem o seu conjunto de 3-4 armas, carregadas por medidores de bónus. Aprenda um kit, domine o combate.',
     f3t: 'Uma campanha por piloto', f3d: 'Cada personagem tem a sua história, um mapa do mundo para atravessar e um chefe final à espera.',
     g1: 'Nove pilotos',
+    gameplay: 'Em jogo',
   },
   ja: {
     tagline: 'ポン × シューティング。',
@@ -133,6 +138,7 @@ export const seekLangs = {
     f2t: '固定の武器セット', f2d: '各パイロットは3〜4種の専用武器を持ち、ボーナスゲージでチャージ。セットを覚えて、戦いを極めよう。',
     f3t: 'パイロットごとのキャンペーン', f3d: '各キャラクターに物語があり、ワールドマップを進み、最後にはボスが待っています。',
     g1: '9人のパイロット',
+    gameplay: 'ゲームプレイ',
   },
   zh: {
     tagline: 'Pong 遇上射击游戏。',
@@ -141,6 +147,7 @@ export const seekLangs = {
     f2t: '固定武器组', f2d: '每位飞行员都有自己的 3-4 件武器，通过奖励能量条充能。熟悉一套，精通战斗。',
     f3t: '每位飞行员一场战役', f3d: '每个角色都有自己的故事、一张要穿越的世界地图，以及终点等待着的最终 Boss。',
     g1: '九位飞行员',
+    gameplay: '游戏画面',
   },
   it: {
     tagline: 'Quando Pong incontra lo shoot\'em up.',
@@ -149,5 +156,6 @@ export const seekLangs = {
     f2t: 'Kit fissi', f2d: 'Ogni pilota ha il suo set di 3-4 armi, caricate da indicatori di bonus. Impara un kit, domina il combattimento.',
     f3t: 'Una campagna per pilota', f3d: 'Ogni personaggio ha la sua storia, una mappa del mondo da attraversare e un boss finale ad aspettarlo.',
     g1: 'Nove piloti',
+    gameplay: 'In gioco',
   },
 };
