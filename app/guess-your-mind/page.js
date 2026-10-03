@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { QRCodeSVG } from 'qrcode.react';
+import Logo from '@/components/Logo';
+import { useLang } from '@/components/LangSwitcher';
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.shakkam.guessyourmind';
 const APP_STORE_URL = 'https://apps.apple.com/fr/app/guessyourmind/id6769421421';
@@ -255,21 +257,10 @@ function Lightbox({ screenshots, index, onClose, onNavigate }) {
 }
 
 export default function GuessYourMind() {
-  const [lang, setLang] = useState('en');
+  const [lang, switchLang] = useLang(Object.keys(langs));
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const t = langs[lang];
 
-  useEffect(() => {
-    const saved = localStorage.getItem('shakkam-lang');
-    if (saved && langs[saved]) { setLang(saved); return; }
-    const code = (navigator.language || '').slice(0, 2).toLowerCase();
-    if (langs[code]) setLang(code);
-  }, []);
-
-  const switchLang = (code) => {
-    setLang(code);
-    localStorage.setItem('shakkam-lang', code);
-  };
 
   const features = [
     { icon: '👥', title: t.f1title, desc: t.f1desc },
@@ -308,14 +299,12 @@ export default function GuessYourMind() {
             {t.back}
           </Link>
           <span className="text-zinc-700 text-xs">|</span>
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-gradient-to-br from-purple-500 to-violet-700 rounded-lg flex items-center justify-center">
-              <span className="text-sm">🎮</span>
-            </div>
-            <span className="text-white font-bold tracking-[0.2em] uppercase text-xs hidden sm:block">
+          <Link href="/" className="flex items-center gap-3">
+            <Logo size="sm" />
+            <span className="text-purple-300/80 font-mono uppercase tracking-[0.2em] text-[10px] hidden sm:block">
               Shakkam Games
             </span>
-          </div>
+          </Link>
         </div>
 
         <div className="flex gap-1 flex-wrap justify-end">
@@ -440,7 +429,7 @@ export default function GuessYourMind() {
 
       <footer className="relative z-10 border-t border-white/5 px-8 py-8 text-center">
         <p className="text-zinc-700 text-sm">
-          © {new Date().getFullYear()} Shakkam Games · {t.footer}
+          © {new Date().getFullYear()} LEO Labs · Shakkam Games · {t.footer}
         </p>
       </footer>
 

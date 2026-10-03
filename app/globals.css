@@ -2,19 +2,177 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
-  height: 100%;
-  background: #0a0a0f;
+  background: #07080a;
   color: #fff;
-  font-family: system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: #7c3aed;
-  color: #fff;
+  background: #c8f031;
+  color: #07080a;
 }
+
+/* ---------- Typo ---------- */
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+@media (min-width: 1024px) {
+  .text-outline { -webkit-text-stroke-width: 3px; }
+}
+.text-outline-faint {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+}
+
+.pixelated { image-rendering: pixelated; }
+
+/* ---------- Grain global ---------- */
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  --hx: 70%;
+  --hy: 40%;
+  --px: 0;
+  --py: 0;
+}
+
+.hero-spot {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(600px circle at var(--hx) var(--hy), rgba(200, 240, 49, 0.13), transparent 60%),
+    radial-gradient(900px circle at 85% 10%, rgba(124, 58, 237, 0.12), transparent 60%);
+  transition: background 0.1s;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%);
+}
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(40px); filter: blur(8px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+.hero-in {
+  opacity: 0;
+  animation: hero-in 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Tracé de la vrille */
+@keyframes draw {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
+}
+.draw-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 2.4s cubic-bezier(0.65, 0, 0.35, 1) 0.3s forwards;
+}
+.draw-slow { animation-duration: 4s; }
+
+/* Cartes flottantes du hero : flottement + parallaxe pointeur */
+@keyframes bob {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -14px; }
+}
+.float-card {
+  position: absolute;
+  transform:
+    translate(calc(var(--px) * var(--d) * -40px), calc(var(--py) * var(--d) * -40px))
+    rotate(var(--r, 0deg));
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: bob 6s ease-in-out infinite;
+}
+.float-card:hover { z-index: 2; }
+
+@keyframes cue {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.6; }
+  50%      { transform: translate(-50%, 6px); opacity: 1; }
+}
+.scroll-cue { animation: cue 2s ease-in-out infinite; }
+
+/* ---------- Bandeau défilant ---------- */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-50% - 1.25rem)); }
+}
+.marquee { animation: marquee 28s linear infinite; }
+
+/* ---------- Cartes projets ---------- */
+
+.spotlight-card {
+  --mx: 50%;
+  --my: 50%;
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  isolation: isolate;
+  transform: perspective(1200px) rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.3s ease-out, border-color 0.3s;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(420px circle at var(--mx) var(--my), rgba(200, 240, 49, 0.1), transparent 60%);
+}
+.spotlight-card:hover { border-color: rgba(200, 240, 49, 0.35); }
+.spotlight-card:hover::before { opacity: 1; }
+
+/* ---------- Apparition au scroll ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-in, .reveal { opacity: 1; transform: none; animation: none; filter: none; }
+  .draw-path { animation: none; stroke-dashoffset: 0; }
+  .float-card, .marquee, .scroll-cue { animation: none; }
+  .spotlight-card { transform: none; }
+}
+
+/* ---------- Page Guess Your Mind (label Shakkam Games, violet) ---------- */
 
 @keyframes glow {
   0%, 100% { box-shadow: 0 0 30px #7c3aed44, 0 0 60px #7c3aed22; }
