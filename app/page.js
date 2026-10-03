@@ -38,6 +38,7 @@ const GAMES = {
 const SITES = [
   { key: 'tl', name: '2-LIMITED', url: 'https://2limited.fr', domain: '2limited.fr', img: '/images/projects/2limited.webp' },
   { key: 'sk', name: 'SHAKKAM', url: 'https://shakkam.me', domain: 'shakkam.me', img: '/images/projects/shakkam-me.webp' },
+  { key: 'lm', name: 'Laurent Christin', url: 'https://laurent-massage.vercel.app', domain: 'laurent-massage.vercel.app', img: '/images/projects/laurent-christin.webp' },
 ];
 
 const MARQUEE = ['iOS', 'Android', 'Web', 'Next.js', 'React Native', 'Lua', 'Game design', 'UX / UI', 'Motion', 'i18n'];
@@ -249,16 +250,16 @@ export default function Home() {
 
         <div id="sites" className="scroll-mt-24 mb-24">
           <SubHead title={t.sitesTitle} sub={t.sitesSub} />
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {SITES.map((s, i) => (
-            <Reveal key={s.key} delay={i * 120}>
+            <Reveal key={s.key} delay={i * 120} className={i === 2 ? 'h-full md:max-lg:col-span-2' : 'h-full'}>
               <SpotlightCard
                 as="a"
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 tilt={false}
-                className="group block rounded-[2rem] border border-white/10 bg-zinc-950 overflow-hidden"
+                className="group flex flex-col h-full rounded-[2rem] border border-white/10 bg-zinc-950 overflow-hidden"
               >
                 {/* Fausse barre de navigateur */}
                 <div className="flex items-center gap-3 px-5 py-3 border-b border-white/10 bg-white/[0.03]">
@@ -282,11 +283,11 @@ export default function Home() {
                   <span className="absolute top-4 left-4 text-[11px] font-mono uppercase tracking-widest bg-ink/70 backdrop-blur border border-white/10 rounded-full px-3 py-1 text-zinc-300">
                     {t[`${s.key}Tag`]}
                   </span>
-                  <h3 className="absolute bottom-4 left-6 font-display font-extrabold text-4xl sm:text-5xl tracking-tight">{s.name}</h3>
+                  <h3 className="absolute bottom-4 left-6 font-display font-extrabold text-3xl sm:text-4xl tracking-tight">{s.name}</h3>
                 </div>
-                <div className="p-6 pt-4 flex flex-col sm:flex-row sm:items-end justify-between gap-5">
+                <div className="p-6 pt-4 flex-1 flex flex-col sm:flex-row sm:items-start justify-between gap-5">
                   <p className="text-zinc-400 leading-relaxed max-w-sm">{t[`${s.key}Desc`]}</p>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-white whitespace-nowrap group-hover:text-vine transition-colors">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-white whitespace-nowrap sm:self-end group-hover:text-vine transition-colors">
                     {t.visit}
                     <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M9 7h8v8" /></svg>
                   </span>
