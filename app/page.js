@@ -100,6 +100,14 @@ function BrowserFrame({ domain, src }) {
   );
 }
 
+function ShotFrame({ src, glow }) {
+  return (
+    <div className={`rounded-2xl border border-white/10 bg-black overflow-hidden shadow-2xl ${glow}`}>
+      <img src={src} alt="" className="w-full block" />
+    </div>
+  );
+}
+
 export default function Home() {
   const [lang, setLang] = useLang(LANG_CODES);
   const t = homeLangs[lang];
@@ -195,17 +203,18 @@ export default function Home() {
 
           </div>
 
-          {/* Cartes flottantes en parallaxe : sites + appli */}
-          <div className="relative h-[460px] hidden lg:block" aria-hidden="true">
-            <div className="float-card w-[300px]" style={{ '--d': 1.4, top: '0%', left: '0%', '--r': '-4deg' }}>
+          {/* Cartes flottantes en parallaxe : sites + apps */}
+          <div className="relative h-[480px] hidden lg:block" aria-hidden="true">
+            <div className="float-card w-[225px]" style={{ '--d': 1.4, top: '0%', left: '0%', '--r': '-5deg' }}>
               <BrowserFrame domain="2limited.fr" src="/images/projects/2limited.webp" />
             </div>
-            <div className="float-card w-[150px]" style={{ '--d': 2.2, top: '18%', right: '2%', '--r': '6deg', animationDelay: '1.2s' }}>
-              <div className="rounded-[1.8rem] border-[5px] border-zinc-800 bg-black overflow-hidden shadow-2xl shadow-purple-900/40">
-                <img src="/images/projects/gym-screen.webp" alt="" className="w-full block" />
-              </div>
+            <div className="float-card w-[225px]" style={{ '--d': 2.2, top: '6%', right: '-2%', '--r': '4deg', animationDelay: '1.2s' }}>
+              <ShotFrame src="/images/projects/sd-hero.webp" glow="shadow-cyan-900/50" />
             </div>
-            <div className="float-card w-[270px]" style={{ '--d': 1, bottom: '0%', left: '14%', '--r': '3deg', animationDelay: '2.4s' }}>
+            <div className="float-card w-[250px]" style={{ '--d': 1, bottom: '14%', left: '0%', '--r': '3deg', animationDelay: '2.4s' }}>
+              <ShotFrame src="/images/projects/fq-banner.webp" glow="shadow-amber-900/50" />
+            </div>
+            <div className="float-card w-[225px]" style={{ '--d': 1.8, bottom: '0%', right: '4%', '--r': '-4deg', animationDelay: '3.2s' }}>
               <BrowserFrame domain="shakkam.me" src="/images/projects/shakkam-me.webp" />
             </div>
           </div>
