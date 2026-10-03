@@ -92,8 +92,7 @@ export const seekLangs = {
     f1t: 'Return the ball', f1d: 'Miss it and your opponent gets the edge. Hit it right and you collect the bonuses that charge your arsenal.',
     f2t: 'Fixed kits', f2d: 'Each pilot has their own set of 3-4 weapons, charged by bonus gauges. Learn a kit, master the fight.',
     f3t: 'A campaign per pilot', f3d: 'Each character has a story, a world map to cross and a final boss waiting at the end.',
-    g1: 'Nine pilots', g2: 'The campaign map',
-    roster: { controleur: 'Controller', lourd: 'Heavy', mini: 'Mini', missiles: 'Missiles', mitrailleur: 'Gunner', organisateur: 'Organizer', perturbateur: 'Disruptor', vif: 'Swift', zoneur: 'Zoner' },
+    g1: 'Nine pilots',
   },
   fr: {
     tagline: 'Quand Pong rencontre le shoot\'em up.',
@@ -101,8 +100,7 @@ export const seekLangs = {
     f1t: 'Renvoyez la balle', f1d: 'Ratez-la et l\'adversaire prend l\'avantage. Frappez-la bien et vous récupérez les bonus qui chargent votre arsenal.',
     f2t: 'Des kits fixes', f2d: 'Chaque pilote a son propre jeu de 3-4 armes, chargées par des jauges de bonus. Apprenez un kit, maîtrisez le combat.',
     f3t: 'Une campagne par pilote', f3d: 'Chaque personnage a son histoire, une carte du monde à traverser et un boss final qui l\'attend.',
-    g1: 'Neuf pilotes', g2: 'La carte de campagne',
-    roster: { controleur: 'Contrôleur', lourd: 'Lourd', mini: 'Mini', missiles: 'Missiles', mitrailleur: 'Mitrailleur', organisateur: 'Organisateur', perturbateur: 'Perturbateur', vif: 'Vif', zoneur: 'Zoneur' },
+    g1: 'Neuf pilotes',
   },
   es: {
     tagline: 'Cuando Pong se encuentra con el shoot\'em up.',
@@ -110,8 +108,7 @@ export const seekLangs = {
     f1t: 'Devuelve la pelota', f1d: 'Si fallas, el rival gana ventaja. Si la golpeas bien, recoges los bonus que cargan tu arsenal.',
     f2t: 'Kits fijos', f2d: 'Cada piloto tiene su propio conjunto de 3-4 armas, cargadas con medidores de bonus. Aprende un kit, domina el combate.',
     f3t: 'Una campaña por piloto', f3d: 'Cada personaje tiene su historia, un mapa del mundo por recorrer y un jefe final esperando.',
-    g1: 'Nueve pilotos', g2: 'El mapa de la campaña',
-    roster: { controleur: 'Controlador', lourd: 'Pesado', mini: 'Mini', missiles: 'Misiles', mitrailleur: 'Ametrallador', organisateur: 'Organizador', perturbateur: 'Perturbador', vif: 'Veloz', zoneur: 'Zonificador' },
+    g1: 'Nueve pilotos',
   },
   de: {
     tagline: 'Pong trifft Shoot\'em up.',
@@ -119,8 +116,7 @@ export const seekLangs = {
     f1t: 'Ball zurückschlagen', f1d: 'Verfehlst du ihn, bekommt der Gegner Oberwasser. Triffst du ihn gut, sammelst du die Boni, die dein Arsenal aufladen.',
     f2t: 'Feste Waffensets', f2d: 'Jeder Pilot hat sein eigenes Set aus 3-4 Waffen, aufgeladen über Bonus-Anzeigen. Lerne ein Set, beherrsche den Kampf.',
     f3t: 'Eine Kampagne pro Pilot', f3d: 'Jede Figur hat ihre Geschichte, eine Weltkarte zum Durchqueren und einen Endboss, der wartet.',
-    g1: 'Neun Piloten', g2: 'Die Kampagnenkarte',
-    roster: { controleur: 'Kontrolleur', lourd: 'Schwer', mini: 'Mini', missiles: 'Raketen', mitrailleur: 'Schütze', organisateur: 'Organisator', perturbateur: 'Störer', vif: 'Flink', zoneur: 'Zonierer' },
+    g1: 'Neun Piloten',
   },
   pt: {
     tagline: 'Quando o Pong encontra o shoot\'em up.',
@@ -128,8 +124,7 @@ export const seekLangs = {
     f1t: 'Devolva a bola', f1d: 'Se falhar, o adversário ganha vantagem. Se acertar bem, recolhe os bónus que carregam o seu arsenal.',
     f2t: 'Kits fixos', f2d: 'Cada piloto tem o seu conjunto de 3-4 armas, carregadas por medidores de bónus. Aprenda um kit, domine o combate.',
     f3t: 'Uma campanha por piloto', f3d: 'Cada personagem tem a sua história, um mapa do mundo para atravessar e um chefe final à espera.',
-    g1: 'Nove pilotos', g2: 'O mapa da campanha',
-    roster: { controleur: 'Controlador', lourd: 'Pesado', mini: 'Mini', missiles: 'Mísseis', mitrailleur: 'Metralhador', organisateur: 'Organizador', perturbateur: 'Perturbador', vif: 'Veloz', zoneur: 'Zoneador' },
+    g1: 'Nove pilotos',
   },
   ja: {
     tagline: 'ポン × シューティング。',
@@ -137,8 +132,7 @@ export const seekLangs = {
     f1t: 'ボールを打ち返せ', f1d: '打ち損なえば相手が優位に。うまく打てば、武器庫をチャージするボーナスが手に入ります。',
     f2t: '固定の武器セット', f2d: '各パイロットは3〜4種の専用武器を持ち、ボーナスゲージでチャージ。セットを覚えて、戦いを極めよう。',
     f3t: 'パイロットごとのキャンペーン', f3d: '各キャラクターに物語があり、ワールドマップを進み、最後にはボスが待っています。',
-    g1: '9人のパイロット', g2: 'キャンペーンマップ',
-    roster: { controleur: 'コントローラー', lourd: 'ヘビー', mini: 'ミニ', missiles: 'ミサイル', mitrailleur: 'ガンナー', organisateur: 'オーガナイザー', perturbateur: 'ディスラプター', vif: 'スウィフト', zoneur: 'ゾーナー' },
+    g1: '9人のパイロット',
   },
   zh: {
     tagline: 'Pong 遇上射击游戏。',
@@ -146,8 +140,7 @@ export const seekLangs = {
     f1t: '把球打回去', f1d: '漏球，对手就占上风；打得好，就能收集为武器库充能的奖励。',
     f2t: '固定武器组', f2d: '每位飞行员都有自己的 3-4 件武器，通过奖励能量条充能。熟悉一套，精通战斗。',
     f3t: '每位飞行员一场战役', f3d: '每个角色都有自己的故事、一张要穿越的世界地图，以及终点等待着的最终 Boss。',
-    g1: '九位飞行员', g2: '战役地图',
-    roster: { controleur: '控制者', lourd: '重型', mini: '迷你', missiles: '导弹', mitrailleur: '机枪手', organisateur: '组织者', perturbateur: '干扰者', vif: '迅捷', zoneur: '区域者' },
+    g1: '九位飞行员',
   },
   it: {
     tagline: 'Quando Pong incontra lo shoot\'em up.',
@@ -155,7 +148,6 @@ export const seekLangs = {
     f1t: 'Rimanda la palla', f1d: 'Se la manchi, l\'avversario prende il vantaggio. Se la colpisci bene, raccogli i bonus che caricano il tuo arsenale.',
     f2t: 'Kit fissi', f2d: 'Ogni pilota ha il suo set di 3-4 armi, caricate da indicatori di bonus. Impara un kit, domina il combattimento.',
     f3t: 'Una campagna per pilota', f3d: 'Ogni personaggio ha la sua storia, una mappa del mondo da attraversare e un boss finale ad aspettarlo.',
-    g1: 'Nove piloti', g2: 'La mappa della campagna',
-    roster: { controleur: 'Controllore', lourd: 'Pesante', mini: 'Mini', missiles: 'Missili', mitrailleur: 'Mitragliere', organisateur: 'Organizzatore', perturbateur: 'Disturbatore', vif: 'Rapido', zoneur: 'Zonatore' },
+    g1: 'Nove piloti',
   },
 };
