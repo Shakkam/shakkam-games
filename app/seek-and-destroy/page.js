@@ -10,6 +10,7 @@ const SHOTS = [
   '/images/projects/sd/gameplay.webp',
   '/images/projects/sd/gameplay2.webp',
   '/images/projects/sd/gameplay3.webp',
+  '/images/projects/sd/gameplay4.webp',
 ];
 
 const OTHERS = [
@@ -34,7 +35,7 @@ export default function SeekAndDestroy() {
             <SectionTitle>{t.gameplay}</SectionTitle>
             <div className="grid sm:grid-cols-2 gap-4">
               {SHOTS.map((src, i) => (
-                <Reveal key={src} delay={i * 100} className={i === 0 ? 'sm:col-span-2' : ''}>
+                <Reveal key={src} delay={(i % 2) * 100}>
                   <div className="rounded-3xl border border-white/10 overflow-hidden bg-black shadow-2xl shadow-cyan-900/20">
                     <img src={src} alt={t.gameplay} loading="lazy" className="w-full block pixelated" />
                   </div>
