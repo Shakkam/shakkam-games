@@ -146,6 +146,7 @@ export default function Home() {
               <a href="#sites" className="hover:text-white transition-colors">{t.navSites}</a>
               <a href="#games" className="hover:text-white transition-colors">{t.navGames}</a>
               <a href="#studio" className="hover:text-white transition-colors">{t.navAbout}</a>
+              <a href="#contact" className="hover:text-white transition-colors">{t.navContact}</a>
             </div>
             <LangSwitcher lang={lang} langs={LANG_CODES} onChange={setLang} />
           </nav>
@@ -392,6 +393,23 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="relative mx-auto max-w-7xl px-4 sm:px-6 pb-24 scroll-mt-20">
+        <Reveal>
+          <div className="rounded-[2.5rem] border border-white/10 bg-zinc-950 p-8 sm:p-14 text-center">
+            <h2 className="font-display font-extrabold text-4xl md:text-6xl tracking-tight mb-6">{t.contactTitle}</h2>
+            <p className="text-lg text-zinc-300 max-w-2xl mx-auto mb-2">{t.contactText}</p>
+            <p className="text-zinc-400 mb-6">{t.contactCta}</p>
+            <a
+              href="mailto:camille.schoell@gmail.com"
+              className="inline-block font-mono text-lg sm:text-2xl text-vine hover:text-white transition-colors break-all"
+            >
+              camille.schoell@gmail.com
+            </a>
+          </div>
+        </Reveal>
       </section>
 
       {/* Footer */}

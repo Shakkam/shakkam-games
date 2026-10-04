@@ -51,7 +51,7 @@ export default function LangSwitcher({ lang, langs, onChange, accent = 'bg-vine 
         {lang}
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 grid grid-cols-4 gap-1 p-1.5 rounded-2xl bg-zinc-900/95 border border-white/10 backdrop-blur-md shadow-2xl z-50">
+        <div className="absolute right-0 mt-2 w-max grid grid-cols-4 gap-1 p-1.5 rounded-2xl bg-zinc-900/95 border border-white/10 backdrop-blur-md shadow-2xl z-50">
           {langs.map((code) => (
             <button
               key={code}
