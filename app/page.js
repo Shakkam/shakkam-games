@@ -379,12 +379,12 @@ export default function Home() {
 
       {/* Le studio */}
       <section id="studio" className="relative mx-auto max-w-7xl px-4 sm:px-6 py-24 scroll-mt-20">
-        <div className="relative rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-vine/[0.07] via-zinc-950 to-zinc-950 p-8 sm:p-14 overflow-hidden">
+        <div className="relative rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-vine/[0.07] via-zinc-950 to-zinc-950 p-6 sm:p-14 overflow-hidden">
           <Vrille className="absolute -right-10 -bottom-10 w-72 h-72 sm:w-[28rem] sm:h-[28rem] text-vine/15" strokeWidth={1.5} />
-          <div className="relative grid lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16">
+          <div className="relative grid grid-cols-[minmax(0,1fr)] lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16">
             <Reveal>
               <p className="font-mono text-xs uppercase tracking-[0.3em] text-vine mb-4">{t.aboutKicker}</p>
-              <h2 className="font-display font-extrabold text-5xl md:text-7xl tracking-tight leading-[0.95]">{t.aboutTitle}</h2>
+              <h2 className="font-display font-extrabold text-[2.5rem] sm:text-5xl md:text-7xl break-words tracking-tight leading-[0.95]">{t.aboutTitle}</h2>
             </Reveal>
             <div className="space-y-6 text-lg leading-relaxed">
               <Reveal delay={80}><p className="text-zinc-300"><span className="text-vine font-bold">L · E · O</span> — {t.about1}</p></Reveal>
