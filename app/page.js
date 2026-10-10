@@ -39,6 +39,7 @@ const SITES = [
   { key: 'tl', name: '2-LIMITED', url: 'https://2limited.fr', domain: '2limited.fr', img: '/images/projects/2limited.webp' },
   { key: 'sk', name: 'SHAKKAM', url: 'https://shakkam.me', domain: 'shakkam.me', img: '/images/projects/shakkam-me.webp' },
   { key: 'lm', name: 'Laurent Christin', url: 'https://laurent-massage.vercel.app', domain: 'laurent-massage.vercel.app', img: '/images/projects/laurent-christin.webp' },
+  { key: 'ml', name: 'Madeleine & Léon', url: 'https://www.madeleine-leon.fr', domain: 'madeleine-leon.fr', img: '/images/projects/madeleine-leon.webp' },
 ];
 
 const MARQUEE = ['iOS', 'Android', 'Web', 'Next.js', 'React Native', 'Lua', 'Game design', 'UX / UI', 'Motion', 'i18n'];
@@ -251,9 +252,9 @@ export default function Home() {
 
         <div id="sites" className="scroll-mt-24 mb-24">
           <SubHead title={t.sitesTitle} sub={t.sitesSub} />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           {SITES.map((s, i) => (
-            <Reveal key={s.key} delay={i * 120} className={i === 2 ? 'h-full md:max-lg:col-span-2' : 'h-full'}>
+            <Reveal key={s.key} delay={i * 120} className="h-full">
               <SpotlightCard
                 as="a"
                 href={s.url}
