@@ -38,7 +38,7 @@ const GAMES = {
 const SITES = [
   { key: 'tl', name: '2-LIMITED', url: 'https://2limited.fr', domain: '2limited.fr', img: '/images/projects/2limited.webp' },
   { key: 'sk', name: 'SHAKKAM', url: 'https://shakkam.me', domain: 'shakkam.me', img: '/images/projects/shakkam-me.webp' },
-  { key: 'lm', name: 'Laurent Christin', url: 'https://laurent-massage.vercel.app', domain: 'laurent-massage.vercel.app', img: '/images/projects/laurent-christin.webp' },
+  { key: 'lm', name: 'Laurent Christin', url: 'https://www.laurent-christin-therapeute.fr/', domain: 'laurent-christin-therapeute.fr', img: '/images/projects/laurent-christin.webp' },
   { key: 'ml', name: 'Madeleine & Léon', url: 'https://www.madeleine-leon.fr', domain: 'madeleine-leon.fr', img: '/images/projects/madeleine-leon.webp' },
 ];
 
