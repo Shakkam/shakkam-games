@@ -94,6 +94,8 @@ export const seekLangs = {
     f3t: 'A campaign per pilot', f3d: 'Each character has a story, a world map to cross and a final boss waiting at the end.',
     g1: 'Nine pilots',
     gameplay: 'Gameplay',
+    ultras: 'Ultras',
+    ultraNames: { bourrasque: 'Gust', grille: 'Laser Grid', satellites: 'Satellite Guns', trouNoir: 'Black Hole' },
   },
   fr: {
     tagline: 'Quand Pong rencontre le shoot\'em up.',
@@ -103,6 +105,8 @@ export const seekLangs = {
     f3t: 'Une campagne par pilote', f3d: 'Chaque personnage a son histoire, une carte du monde à traverser et un boss final qui l\'attend.',
     g1: 'Neuf pilotes',
     gameplay: 'En jeu',
+    ultras: 'Ultras',
+    ultraNames: { bourrasque: 'Bourrasque', grille: 'Grille laser', satellites: 'Mitrailleuses satellites', trouNoir: 'Trou noir' },
   },
   es: {
     tagline: 'Cuando Pong se encuentra con el shoot\'em up.',
@@ -112,6 +116,8 @@ export const seekLangs = {
     f3t: 'Una campaña por piloto', f3d: 'Cada personaje tiene su historia, un mapa del mundo por recorrer y un jefe final esperando.',
     g1: 'Nueve pilotos',
     gameplay: 'En juego',
+    ultras: 'Ultras',
+    ultraNames: { bourrasque: 'Ráfaga', grille: 'Rejilla láser', satellites: 'Ametralladoras satélite', trouNoir: 'Agujero negro' },
   },
   de: {
     tagline: 'Pong trifft Shoot\'em up.',
@@ -121,6 +127,8 @@ export const seekLangs = {
     f3t: 'Eine Kampagne pro Pilot', f3d: 'Jede Figur hat ihre Geschichte, eine Weltkarte zum Durchqueren und einen Endboss, der wartet.',
     g1: 'Neun Piloten',
     gameplay: 'Im Spiel',
+    ultras: 'Ultras',
+    ultraNames: { bourrasque: 'Sturmböe', grille: 'Lasergitter', satellites: 'Satelliten-MGs', trouNoir: 'Schwarzes Loch' },
   },
   pt: {
     tagline: 'Quando o Pong encontra o shoot\'em up.',
@@ -130,6 +138,8 @@ export const seekLangs = {
     f3t: 'Uma campanha por piloto', f3d: 'Cada personagem tem a sua história, um mapa do mundo para atravessar e um chefe final à espera.',
     g1: 'Nove pilotos',
     gameplay: 'Em jogo',
+    ultras: 'Ultras',
+    ultraNames: { bourrasque: 'Rajada', grille: 'Grelha laser', satellites: 'Metralhadoras satélite', trouNoir: 'Buraco negro' },
   },
   ja: {
     tagline: 'ポン × シューティング。',
@@ -139,6 +149,8 @@ export const seekLangs = {
     f3t: 'パイロットごとのキャンペーン', f3d: '各キャラクターに物語があり、ワールドマップを進み、最後にはボスが待っています。',
     g1: '9人のパイロット',
     gameplay: 'ゲームプレイ',
+    ultras: 'ウルトラ',
+    ultraNames: { bourrasque: '突風', grille: 'レーザーグリッド', satellites: 'サテライトガン', trouNoir: 'ブラックホール' },
   },
   zh: {
     tagline: 'Pong 遇上射击游戏。',
@@ -148,6 +160,8 @@ export const seekLangs = {
     f3t: '每位飞行员一场战役', f3d: '每个角色都有自己的故事、一张要穿越的世界地图，以及终点等待着的最终 Boss。',
     g1: '九位飞行员',
     gameplay: '游戏画面',
+    ultras: '终极技',
+    ultraNames: { bourrasque: '狂风', grille: '激光网格', satellites: '卫星机枪', trouNoir: '黑洞' },
   },
   it: {
     tagline: 'Quando Pong incontra lo shoot\'em up.',
@@ -157,5 +171,7 @@ export const seekLangs = {
     f3t: 'Una campagna per pilota', f3d: 'Ogni personaggio ha la sua storia, una mappa del mondo da attraversare e un boss finale ad aspettarlo.',
     g1: 'Nove piloti',
     gameplay: 'In gioco',
+    ultras: 'Ultra',
+    ultraNames: { bourrasque: 'Raffica', grille: 'Griglia laser', satellites: 'Mitragliatrici satellite', trouNoir: 'Buco nero' },
   },
 };
