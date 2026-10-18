@@ -24,7 +24,7 @@ const ULTRAS = [
 
 const OTHERS = [
   { name: 'Guess Your Mind', href: '/guess-your-mind', img: '/images/projects/guess-your-mind.webp' },
-  { name: 'Family Quiz', href: '/family-quiz', img: '/images/projects/family-quiz.webp' },
+  { name: 'Hydra Quiz', href: '/hydra-quiz', img: '/images/projects/hydra-quiz.webp' },
 ];
 
 export default function SeekAndDestroy() {

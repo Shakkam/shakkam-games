@@ -19,10 +19,10 @@ const GAMES = {
     apple: 'https://apps.apple.com/fr/app/guessyourmind/id6769421421',
     stack: ['iOS', 'Android', 'Expo'],
   },
-  fq: {
-    name: 'Family Quiz',
-    img: '/images/projects/family-quiz.webp',
-    href: '/family-quiz',
+  hydra: {
+    name: 'Hydra Quiz',
+    img: '/images/projects/hydra-quiz.webp',
+    href: '/hydra-quiz',
     play: 'https://play.google.com/store/apps/details?id=com.shakkam.familyquiz',
     apple: 'https://apps.apple.com/app/id6782669677',
     stack: ['iOS', 'Android', 'Expo'],
@@ -215,7 +215,7 @@ export default function Home() {
               <ShotFrame src="/images/projects/sd-hero.webp" glow="shadow-cyan-900/50" />
             </div>
             <div className="float-card w-[250px]" style={{ '--d': 1, bottom: '14%', left: '0%', '--r': '3deg', animationDelay: '2.4s' }}>
-              <ShotFrame src="/images/projects/fq-banner.webp" glow="shadow-amber-900/50" />
+              <ShotFrame src="/images/projects/hydra-banner.webp" glow="shadow-amber-900/50" />
             </div>
             <div className="float-card w-[225px]" style={{ '--d': 1.8, bottom: '0%', right: '4%', '--r': '-4deg', animationDelay: '3.2s' }}>
               <BrowserFrame domain="shakkam.me" src="/images/projects/shakkam-me.webp" />
@@ -328,28 +328,28 @@ export default function Home() {
             </SpotlightCard>
           </Reveal>
 
-          {/* Family Quiz */}
+          {/* Hydra Quiz */}
           <Reveal delay={100}>
             <SpotlightCard className="group h-full rounded-[2rem] border border-white/10 bg-gradient-to-br from-amber-950/50 via-zinc-950 to-zinc-950 p-7 sm:p-8">
-              <Link href={GAMES.fq.href} className="absolute inset-0 z-0 rounded-[2rem]" aria-label={`${t.discover} — ${GAMES.fq.name}`} />
+              <Link href={GAMES.hydra.href} className="absolute inset-0 z-0 rounded-[2rem]" aria-label={`${t.discover} — ${GAMES.hydra.name}`} />
               <span className="absolute top-6 right-6 text-zinc-600 group-hover:text-white group-hover:translate-x-1 transition-all" aria-hidden="true">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-6-6l6 6-6 6" /></svg>
               </span>
               <div className="flex flex-col sm:flex-row gap-6 sm:items-center mb-6">
                 <img
-                  src={GAMES.fq.img}
-                  alt={GAMES.fq.name}
+                  src={GAMES.hydra.img}
+                  alt={GAMES.hydra.name}
                   className="w-24 h-24 rounded-[1.6rem] shadow-xl shadow-amber-900/40 transition-transform duration-500 group-hover:scale-105 group-hover:rotate-3"
                 />
                 <div>
                   <Badge>{t.available}</Badge>
-                  <h3 className="font-display font-extrabold text-3xl tracking-tight mt-3">{GAMES.fq.name}</h3>
+                  <h3 className="font-display font-extrabold text-3xl tracking-tight mt-3">{GAMES.hydra.name}</h3>
                 </div>
               </div>
-              <p className="text-zinc-400 leading-relaxed mb-6">{t.fqDesc}</p>
+              <p className="text-zinc-400 leading-relaxed mb-6">{t.hydraDesc}</p>
               <div className="flex flex-col gap-4">
-                <StoreLinks game={GAMES.fq} label={t.getOn} />
-                <Chips items={GAMES.fq.stack} />
+                <StoreLinks game={GAMES.hydra} label={t.getOn} />
+                <Chips items={GAMES.hydra.stack} />
               </div>
             </SpotlightCard>
           </Reveal>
